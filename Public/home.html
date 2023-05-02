@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: rgb(248, 71, 6);
+            color: rgb(0, 9, 16);
+        }
+        button{
+            background-color: rgb(70, 90, 33);
+            border-color: rgb(0, 16, 1);
+            color: rgb(255, 253, 253);
+        }
+       
+        h2,p{
+            color: black;
+        }
+        a{
+            color: aliceblue;
+        }
+        div{
+            color: rgb(250, 251, 250);
+        }
+
+    </style>
+
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+
+    <button><a href="/">BMI Calculator</a></button>
+    <button><a href="/about">Fruit Selector</a></button>
+    <button><a href="/contact">Magic World</a></button>
+
+    <hr class="hrLine">
+
+    <h1>BMI Calculator.</h1>
+
+    <form>
+  
+        Weight (kg): <input type="text" id="weightInput">
+        <br><br>
+        Height (m): <input type="text" id="heightInput">
+        <br><br>
+        <input type="button" value="Calculate" onclick="calculateBMI()" id="calculateBtn">
+  
+    </form>
+  
+    <div id="result"></div>
+  
+    <script>
+  
+          function calculateBMI(){
+  
+            var weight = document.getElementById("weightInput").value;
+            var height = document.getElementById("heightInput").value;
+  
+            var BMI = weight/ (height*height);
+  
+            document.getElementById("result").innerHTML= " The BMI result is: " + BMI ;
+  
+          }
+  
+  
+    </script>
+  
+  
+    
+
+
+</body>
+</html>

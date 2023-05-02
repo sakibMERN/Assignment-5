@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Fruits</title>
+
+    <style>
+        body{
+            background-color: rgb(248, 244, 6);
+            color: rgb(0, 9, 16);
+        }
+        button{
+            background-color: rgb(7, 31, 149);
+            border-color: rgb(114, 248, 116);
+            color: rgb(255, 253, 253);
+        }
+       
+        h2,p{
+            color: black;
+        }
+        a{
+            color: aliceblue;
+        }
+        p{
+            color: rgb(249, 5, 5);
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button class="myClass1"><a href="/">BMI Calculator</a></button>
+    <button class="myClass2"><a href="/about">Fruit Selector</a></button>
+    <button class="myClass3"><a href="/contact">Magic World</a></button>
+    
+    <hr class="hrLine">
+    <br><br>
+
+    <h2>Write Banana, Orange or Apple in the input field and click the button.</h2>
+    <br>
+    <input type="text" id="myInput">
+    <button onclick="myFruits()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        function myFruits(){
+            let result;
+            let fruits = document.querySelector('#myInput').value;
+
+            switch(fruits){
+                case 'Banana':
+                  result = "Banana is good!";
+                break;
+
+                case 'Orange':
+                    result = "I am not a fan of orange";
+                break;
+
+                case 'Apple':
+                    result = "I love Apple";
+                break;
+                default:
+                    result = "I have never heard of that fruit....";
+            }
+            document.querySelector("#demo").innerHTML= result;
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

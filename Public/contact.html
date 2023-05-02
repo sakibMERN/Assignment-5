@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic World</title>
+
+    <style>
+        body{
+            background-color: rgb(139, 214, 18);
+            color: aliceblue;
+        }
+        button{
+            background-color: rgb(75, 75, 3);
+            border-color: white;
+            color: white;
+        }
+        a{
+            color: white;
+
+        }
+        h2,h3,p{
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body class="myBody">
+
+
+    <button class="myClass1"><a href="/">BMI Calculator</a></button>
+    <button class="myClass2"><a href="/about">Fruit Selector</a></button>
+    <button class="myClass3"><a href="/contact">Magic World</a></button>
+
+    <hr class="hrLine">
+
+    <h2>This Is Magic World</h2>
+
+    <h3>When you can answer this question, you can see your answer on the page. </h3>
+    <br>
+    <p>What is your name?</p>
+
+    <input type="text" id="myInput">
+    <button onclick="myName()">Submit Answer</button>
+
+    <script>
+
+        function myName(){
+            let input = document.querySelector('#myInput').value;
+            let w = window.open();
+
+            w.document.open();
+            w.document.write("Hello " + input);
+            w.document.close();
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
